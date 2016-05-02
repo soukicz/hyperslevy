@@ -31,7 +31,7 @@ class Api {
             throw new \RuntimeException(sprintf('An invalid server was provided: "%s".', $server));
         }
         $this->httpClient = new Client([
-            'base_uri' => sprintf('http://www.%s/api', $server),
+            'base_uri' => sprintf('http://www.%s/api/', $server),
             'exceptions' => false,
         ]);
         $this->hash = $hash;
